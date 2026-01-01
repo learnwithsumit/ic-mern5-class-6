@@ -1,7 +1,11 @@
-export default function LayoutTwo() {
+import useScreenSize from "../hooks/useScreenSize";
+
+export default function LayoutOne() {
+    const onSmallScreen = useScreenSize(868);
+
     return (
-        <div>
-            <h1>Layout Two</h1>
+        <div className={onSmallScreen ? "small" : "large"}>
+            <h1>Layout 2</h1>
         </div>
     );
 }
